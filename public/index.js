@@ -28,9 +28,21 @@ const createLi = function(id, innerText) {
   ul.appendChild(li);
 }
 
+const createImage = function(id, url) {
+  const li = document.createElement("li");
+  const img = document.createElement("img");
+  const ul = document.getElementById(id);
+  img.src = url;
+  img.height = 300;
+  img.width = 300;
+  li.appendChild(img);
+  ul.appendChild(li);
+}
+
 const displayBeers = function(beers) {
   for(let beer of beers) {
     createLi("beer-list", beer.name);
+    createImage("beer-list", beer.image_url);
   }
 }
 
