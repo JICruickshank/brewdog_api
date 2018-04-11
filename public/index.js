@@ -87,21 +87,20 @@ const selectBeer = function(beers) {
 
 const displayBeer = function(beer) {
   const container = document.querySelector("#displayBeer");
-  // const header = document.createElement("h2");
   const header = createHeader(`${beer.name} - ${beer.abv}%`);
   container.appendChild(header);
   const image = createImage(beer.image_url);
   container.appendChild(image);
 }
 
-const getIngredients = function(beer) {
-  const ingredients = [];
-  for(let ingredient in beer.ingredients) {
-    ingredients.push(beer.ingredients[ingredient]);
-  }
-  debugger;
-  ingredients = ingredients.flatten(2);
-}
+// const getIngredients = function(beer) {
+//   const ingredients = [];
+//   for(let ingredient in beer.ingredients) {
+//     ingredients.push(beer.ingredients[ingredient]);
+//   }
+//   debugger;
+//   ingredients = ingredients.flatten(2);
+// }
 
 var app = function(){
   const url = "https://api.punkapi.com/v2/beers";
