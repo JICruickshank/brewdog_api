@@ -7,7 +7,9 @@ const makeRequest = function(url, callback) {
 
 const requestComplete = function() {
   if(this.status !== 200) return;
-  console.log("Testing");
+  const jsonString = this.responseText;
+  const beers = JSON.parse(jsonString);
+  debugger;
 }
 
 
