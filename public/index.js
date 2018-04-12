@@ -18,10 +18,12 @@ const requestComplete = function() {
 
 const createUl = function(id) {
   const ul = document.createElement("ul");
+  ul.id = id;
 }
 
 const createContainer = function(className) {
   const div = document.createElement("div");
+  div.className = className;
 }
 
 const createPTag = function(innerText) {
